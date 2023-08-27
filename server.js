@@ -11,7 +11,9 @@ app.set('view engine', 'ejs');
 
 // Specify the directory where EJS templates are located
 app.set('views', path.join(__dirname, 'views'));
-
+app.get('/',(req,res)=>{
+    res.send("working")
+  })
 // Use auth routes
 app.use('/api/auth', authRoutes);
 
